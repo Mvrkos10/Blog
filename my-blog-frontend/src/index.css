@@ -1,0 +1,124 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #2eb400;
+  text-decoration: none; /* Eliminado subrayado por defecto */
+}
+a:hover {
+  color: #1b8b00; /* Color ligeramente más oscuro al pasar el ratón */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #121212; /* Un gris muy oscuro para el fondo */
+  color: #e0e0e0; /* Color de texto más claro para un buen contraste */
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center; /* Opcional: para centrar texto dentro del contenedor */
+  padding: 20px;
+  background-color: #1e1e1e; /* Fondo del contenedor ligeramente más claro que el fondo global */
+  border-radius: 12px; /* Bordes redondeados para un toque más moderno */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff; /* Color de texto blanco para mejor contraste */
+  margin-bottom: 20px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #ffffff; /* Color del texto del botón */
+  cursor: pointer;
+  transition: all 0.25s ease; /* Transición más suave para todos los estados del botón */
+}
+button:hover {
+  background-color: #333333; /* Fondo del botón cambia al pasar el ratón */
+  border-color: #2eb400; /* Borde del botón al pasar el ratón */
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; /* Espacio entre los elementos del formulario */
+  padding: 20px; /* Espacio interno del formulario */
+  background-color: #2e2e2e; /* Fondo del formulario para que resalte en el tema oscuro */
+  border-radius: 8px; /* Bordes redondeados del formulario */
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em; /* Espacio entre la etiqueta y el campo de entrada */
+}
+
+label {
+  font-weight: 500; /* Hacer las etiquetas un poco más visibles */
+}
+
+input,
+textarea {
+  border: 1px solid #555; /* Borde de los campos de entrada */
+  border-radius: 4px; /* Bordes redondeados de los campos de entrada */
+  padding: 0.5em; /* Espacio interno en los campos de entrada */
+  background-color: #1e1e1e; /* Fondo de los campos de entrada en tema oscuro */
+  color: #e0e0e0; /* Color del texto en los campos de entrada */
+}
+
+textarea {
+  resize: vertical; /* Permitir que el usuario ajuste la altura del textarea */
+  min-height: 100px; /* Altura mínima del textarea */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #2eb400;
+    background-color: #ffffff;
+  }
+  body {
+    background-color: #f5f5f5; /* Fondo claro para el modo claro */
+    color: #333333; /* Texto más oscuro para el contraste en el modo claro */
+  }
+  .container {
+    background-color: #ffffff; /* Fondo del contenedor en modo claro */
+    border: 1px solid #e0e0e0; /* Borde del contenedor en modo claro */
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #333333; /* Color del texto del botón en modo claro */
+  }
+  a:hover {
+    color: #1b8b00; /* Color de enlace en modo claro */
+  }
+}
